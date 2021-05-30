@@ -59,14 +59,14 @@ def prediction(model: Model, confidence: float, file: UploadFile = File(...)):
     output_image, bbox, label, conf = detect_and_draw_box(image=image, model=model, confidence=confidence)
 
     # Save it in a folder within the server
-    out_file_path = f'images_uploaded/{str(filename)}'
+    out_file_path = f'assets/images_uploaded/{str(filename)}'
     Path(out_file_path).parent.mkdir(parents=True, exist_ok=True)
-    cv2.imwrite(f'images_uploaded/{filename}', output_image)
+    cv2.imwrite(f'assets/images_uploaded/{filename}', output_image)
 
     # 4. STREAM THE RESPONSE BACK TO THE CLIENT
 
     # Open the saved image for reading in binary mode
-    file_image = open(f'images_uploaded/{filename}', mode="rb")
+    file_image = open(f'assets/images_uploaded/{filename}', mode="rb")
 
     # Return the image as a stream specifying media type
     return StreamingResponse(file_image, media_type="image/jpeg")

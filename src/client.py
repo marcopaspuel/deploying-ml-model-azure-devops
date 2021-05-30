@@ -6,8 +6,8 @@ from src.client_utils import response_from_server, decode_image_from_response
 
 if __name__ == "__main__":
     # Input, Output paths and image format
-    IMAGES_PATH = 'images'
-    OUTPUTS_PATH = 'images_predicted'
+    IMAGES_PATH = 'assets/images'
+    OUTPUTS_PATH = 'assets/images_predicted'
     IMAGE_FORMAT = '*.jpg'
 
     # Server URL
