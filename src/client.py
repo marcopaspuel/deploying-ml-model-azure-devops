@@ -2,7 +2,7 @@ import os
 import cv2
 from pathlib import Path
 
-from src.client_utils import response_from_server, decode_image_from_response
+from client_utils import response_from_server, decode_image_from_response
 
 if __name__ == "__main__":
     # Input, Output paths and image format

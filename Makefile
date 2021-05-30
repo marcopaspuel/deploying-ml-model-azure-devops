@@ -1,12 +1,14 @@
-.PHONY: install test run all shell
-
-all: install test run
+all: install start-server run-client test
 
 install:
 	poetry install
+start-server:
+	poetry run python src/server.py
+run-client:
+	poetry run python src/client.py
 test:
 	poetry run python -m pytest
-run:
-	poetry run python src/main.py
 shell:
 	poetry shell
+
+.PHONY: install start-server run-client test

@@ -12,7 +12,7 @@ from fastapi.responses import StreamingResponse
 
 # Assign an instance of the FastAPI class to the variable "app".
 # You will interact with your api using this instance.
-from src.detect import detect_and_draw_box
+from detect import detect_and_draw_box
 
 app = FastAPI(title='Deploying a ML Model with FastAPI')
 
