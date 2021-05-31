@@ -130,3 +130,12 @@ dmypy.json
 
 # Pycharm
 .idea/
+
+# terraform.tfvars
+terraform.tfvars
+
+# Azure Secrets
+.azure_envs.sh
+
+# Mac files
+.DS_Store
