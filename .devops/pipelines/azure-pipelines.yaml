@@ -21,7 +21,7 @@ variables:
   vmImageName: 'ubuntu-18.04'
 
   # Environment name
-  environmentName: 'test'
+  environmentName: 'prod'
 
 stages:
 - stage: provision
