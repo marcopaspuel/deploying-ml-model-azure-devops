@@ -121,6 +121,7 @@ stages:
               appType: webApp
               package: $(Pipeline.Workspace)/drop-restapi/src-$(Build.BuildId).zip
               deploymentMethod: zipDeploy
+              StartupCommand: poetry run python server.py
               TakeAppOfflineFlag: false
 
 #- stage: test
