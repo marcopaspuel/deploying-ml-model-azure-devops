@@ -20,6 +20,9 @@ variables:
   # Agent VM image name
   vmImageName: 'ubuntu-18.04'
 
+  # Python version: 3.8
+  pythonVersion: '3.8'
+
   # Environment name
   environmentName: 'prod'
 
