@@ -48,9 +48,9 @@ stages:
     - task: TerraformInstaller@0
       displayName: 'Install Terraform'
       inputs:
-        terraformVersion: '0.14.10'
+        terraformVersion: '0.15.4'
 
-    - task: TerraformTaskV1@0
+    - task: TerraformTaskV2@0
       displayName: 'Terraform Init'
       inputs:
         provider: 'azurerm'
@@ -62,7 +62,7 @@ stages:
         backendAzureRmKey: 'terraform.tfstate'
         workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/prod'
 
-    - task: TerraformTaskV1@0
+    - task: TerraformTaskV2@0
       displayName: 'Terraform Apply'
       inputs:
         provider: 'azurerm'
