@@ -50,7 +50,7 @@ stages:
       inputs:
         terraformVersion: '0.15.4'
 
-    - task: TerraformTaskV2@0
+    - task: TerraformTaskV2@2
       displayName: 'Terraform Init'
       inputs:
         provider: 'azurerm'
@@ -62,7 +62,7 @@ stages:
         backendAzureRmKey: 'terraform.tfstate'
         workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/prod'
 
-    - task: TerraformTaskV2@0
+    - task: TerraformTaskV2@2
       displayName: 'Terraform Apply'
       inputs:
         provider: 'azurerm'
