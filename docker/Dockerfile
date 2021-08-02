@@ -8,4 +8,4 @@ RUN pip3 install -r requirements.txt
 COPY src /server/src/
 WORKDIR /server
 
-ENTRYPOINT ["python", "-m", "src.server"]
+ENTRYPOINT ["python", "src/server.py"]
