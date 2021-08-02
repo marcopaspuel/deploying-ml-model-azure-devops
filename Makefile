@@ -1,4 +1,7 @@
-all: start-server run-client
+OWNER := marcopaspuel
+PROJECT := deploying-ml-model-azure-devops
+VERSION := 0.0.1
+OPV := $(OWNER)/$(PROJECT):$(VERSION)
 
 .PHONY: install
 install:
@@ -19,3 +22,8 @@ test:
 .PHONY: shell
 shell:
 	poetry shell
+
+.PHONY: build
+build:
+	poetry export -o requirements.txt
+	docker build -f docker/Dockerfile -t $(OPV) .
