@@ -139,3 +139,6 @@ terraform.tfvars
 
 # Mac files
 .DS_Store
+
+# Build Artifacts
+requirements.txt
