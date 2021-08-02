@@ -23,7 +23,15 @@ test:
 shell:
 	poetry shell
 
-.PHONY: build
-build:
+.PHONY: docker-build
+docker-build:
 	poetry export -o requirements.txt
 	docker build -f docker/Dockerfile -t $(OPV) .
+
+.PHONY: docker-run
+docker-run:
+	docker run --rm -d -p 8000:8000 -e DOCKER-SETUP=True --name api-server $(OPV)
+
+.PHONY: docker-stop
+docker-stop:
+	docker stop api-server
